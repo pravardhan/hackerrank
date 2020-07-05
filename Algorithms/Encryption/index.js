@@ -61,17 +61,9 @@ function encryption(s) {
 function main() {
     // const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
     const ws = fs.createWriteStream(path.join(__dirname, 'output1.txt'));
-
-
     const s = readLine();
-    console.log("S", s);
     let result = encryption(s);
-
-    console.log("RESULT", result);
-
-
-
+    
     ws.write(result + "\n");
-
     ws.end();
 }
